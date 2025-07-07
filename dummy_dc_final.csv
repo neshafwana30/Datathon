@@ -1,0 +1,8 @@
+DC,Type,Total Flow (Ton),Total Flow (m3),Port,Zone,City,Lat,Long
+CDP-BNR,Indirect DC,14300.12810581267,28600.25621162534,Denpasar Port,BaliNusra,Mataram,-8.0,117.0
+CDP-SUL,Indirect DC,12683.177415405444,25366.354830810888,Makassar Port,Sulawesi,Makassar,-3.0,120.0
+DC-JKT,Indirect DC,13770.751522531687,27541.503045063375,Tg. Priok,Jawa,Semarang,-6.2,106.8
+CDP-KLT,CDP,12249.210457343721,24498.420914687442,Balikpapan Port,Kalimantan,Pontianak,-0.5,115.0
+DC-MDN,Factory,14832.280562273174,29664.561124546348,Belawan Port,Sumatera,Palembang,3.6,98.6
+DC-SBY,CDP,5591.508409328158,11183.016818656317,Tg. Priok,Jawa,Tg. Priok,-7.2,112.7
+Pabrik Karawang,Factory,20000.0,40000.0,Tg. Priok,Jawa,Tg. Priok,-6.3022,107.3082
