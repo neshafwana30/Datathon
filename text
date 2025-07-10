@@ -1,0 +1,328 @@
+⏱ Runtime solver: 0.19 detik
+📊 Status Solusi: OPTIMAL
+✅ Solusi ditemukan.
+
+📦 Ringkasan Pemenuhan per DC (Dikirim vs. Oversupply):
+   DC  Demand  Dikirim  Oversupply Tingkat Pemenuhan (%)
+DC038   10608    11800        1192                111.2%
+DC042    7501     8240         739                109.9%
+DC034    7534     8240         706                109.4%
+DC037    7718     8240         522                106.8%
+DC040    1853     2320         467                125.2%
+DC031   25860    26240         380                101.5%
+DC043   10341    10600         259                102.5%
+DC032    5633     5880         247                104.4%
+DC039    2738     2920         182                106.6%
+DC036    6917     7080         163                102.4%
+DC041    3974     4120         146                103.7%
+DC033   15309    15440         131                100.9%
+DC022    1812     1900          88                104.9%
+DC006    1715     1800          85                105.0%
+DC001    2617     2700          83                103.2%
+DC029    3320     3400          80                102.4%
+DC008    1223     1300          77                106.3%
+DC010   10024    10100          76                100.8%
+DC050    7766     7840          74                101.0%
+DC035    5810     5880          70                101.2%
+DC015    3937     4000          63                101.6%
+DC011    2238     2300          62                102.8%
+DC004     840      900          60                107.1%
+DC013    3341     3400          59                101.8%
+DC027    1743     1800          57                103.3%
+DC055    4905     4960          55                101.1%
+DC053    2386     2440          54                102.3%
+DC048    2589     2640          51                102.0%
+DC021    3250     3300          50                101.5%
+DC002    1452     1500          48                103.3%
+DC003    6053     6100          47                100.8%
+DC007    1953     2000          47                102.4%
+DC005    3656     3700          44                101.2%
+DC019    1161     1200          39                103.4%
+DC020    2163     2200          37                101.7%
+DC044    3964     4000          36                100.9%
+DC046    2484     2520          36                101.4%
+DC014    3266     3300          34                101.0%
+DC052    2687     2720          33                101.2%
+DC056    1767     1800          33                101.9%
+DC023    3267     3300          33                101.0%
+DC028    1968     2000          32                101.6%
+DC045    6448     6480          32                100.5%
+DC049    7254     7280          26                100.4%
+DC009    2275     2300          25                101.1%
+DC030    1980     2000          20                101.0%
+DC026    2180     2200          20                100.9%
+DC012    1989     2000          11                100.6%
+DC025     989     1000          11                101.1%
+DC024    3192     3200           8                100.3%
+DC047    5154     5160           6                100.1%
+DC018    1494     1500           6                100.4%
+DC017    5495     5500           5                100.1%
+DC016    2395     2400           5                100.2%
+DC057    3115     3120           5                100.2%
+DC051    3676     3680           4                100.1%
+DC054    2918     2920           2                100.1%
+
+🚚 Trip Aktif dalam Solusi:
+--------------------------------------------------
+DC032 → DC051 via CDD | trip = 12 | total cost = Rp 82,800,000 | volume = 3,360
+DC032 → DC051 via CDE | trip = 1 | total cost = Rp 5,500,000 | volume = 200
+DC032 → DC052 via CDE | trip = 1 | total cost = Rp 5,500,000 | volume = 200
+DC032 → DC055 via CDE | trip = 1 | total cost = Rp 5,500,000 | volume = 200
+DC032 → DC056 via CDD | trip = 4 | total cost = Rp 27,600,000 | volume = 1,120
+DC033 → DC047 via CDD | trip = 18 | total cost = Rp 124,200,000 | volume = 5,040
+DC033 → DC047 via GrandMax | trip = 1 | total cost = Rp 3,500,000 | volume = 120
+DC033 → DC050 via CDD | trip = 28 | total cost = Rp 193,200,000 | volume = 7,840
+DC033 → DC053 via CDD | trip = 8 | total cost = Rp 55,200,000 | volume = 2,240
+DC033 → DC053 via CDE | trip = 1 | total cost = Rp 5,500,000 | volume = 200
+DC033 → DC057 via CDD | trip = 10 | total cost = Rp 69,000,000 | volume = 2,800
+DC033 → DC057 via CDE | trip = 1 | total cost = Rp 5,500,000 | volume = 200
+DC033 → DC057 via GrandMax | trip = 1 | total cost = Rp 3,500,000 | volume = 120
+DC034 → DC048 via CDD | trip = 9 | total cost = Rp 62,100,000 | volume = 2,520
+DC034 → DC055 via CDD | trip = 17 | total cost = Rp 117,300,000 | volume = 4,760
+DC035 → DC002 via GrandMax | trip = 15 | total cost = Rp 52,500,000 | volume = 1,500
+DC035 → DC007 via GrandMax | trip = 20 | total cost = Rp 70,000,000 | volume = 2,000
+DC035 → DC014 via GrandMax | trip = 33 | total cost = Rp 115,500,000 | volume = 3,300
+DC035 → DC015 via GrandMax | trip = 8 | total cost = Rp 28,000,000 | volume = 800
+DC035 → DC016 via GrandMax | trip = 24 | total cost = Rp 84,000,000 | volume = 2,400
+DC035 → DC028 via GrandMax | trip = 20 | total cost = Rp 70,000,000 | volume = 2,000
+DC035 → DC051 via GrandMax | trip = 1 | total cost = Rp 3,500,000 | volume = 120
+DC035 → DC054 via CDD | trip = 10 | total cost = Rp 69,000,000 | volume = 2,800
+DC035 → DC056 via CDD | trip = 2 | total cost = Rp 13,800,000 | volume = 560
+DC036 → DC046 via CDD | trip = 9 | total cost = Rp 62,100,000 | volume = 2,520
+DC036 → DC049 via CDD | trip = 26 | total cost = Rp 179,400,000 | volume = 7,280
+DC036 → DC052 via CDD | trip = 9 | total cost = Rp 62,100,000 | volume = 2,520
+DC037 → DC003 via CDE | trip = 61 | total cost = Rp 400,211,423 | volume = 6,100
+DC037 → DC005 via GrandMax | trip = 23 | total cost = Rp 150,899,389 | volume = 2,300
+DC037 → DC012 via GrandMax | trip = 2 | total cost = Rp 13,121,686 | volume = 200
+DC037 → DC020 via CDE | trip = 22 | total cost = Rp 144,338,546 | volume = 2,200
+DC037 → DC045 via CDE | trip = 1 | total cost = Rp 6,560,843 | volume = 200
+DC041 → DC017 via CDE | trip = 52 | total cost = Rp 341,163,836 | volume = 5,200
+DC041 → DC017 via GrandMax | trip = 3 | total cost = Rp 19,682,529 | volume = 300
+DC041 → DC026 via CDE | trip = 22 | total cost = Rp 144,338,546 | volume = 2,200
+DC041 → DC044 via CDE | trip = 2 | total cost = Rp 13,121,686 | volume = 400
+DC041 → DC045 via CDE | trip = 2 | total cost = Rp 13,121,686 | volume = 400
+DC044 → DC005 via CDE | trip = 14 | total cost = Rp 91,851,802 | volume = 1,400
+DC044 → DC012 via GrandMax | trip = 18 | total cost = Rp 118,095,174 | volume = 1,800
+DC044 → DC022 via GrandMax | trip = 19 | total cost = Rp 124,656,017 | volume = 1,900
+DC044 → DC024 via GrandMax | trip = 32 | total cost = Rp 209,946,976 | volume = 3,200
+DC044 → DC041 via CDE | trip = 3 | total cost = Rp 19,682,529 | volume = 600
+DC045 → DC001 via CDE | trip = 27 | total cost = Rp 177,142,761 | volume = 2,700
+DC045 → DC008 via CDE | trip = 13 | total cost = Rp 85,290,959 | volume = 1,300
+DC045 → DC039 via CDE | trip = 3 | total cost = Rp 19,682,529 | volume = 600
+DC045 → DC044 via Kijang | trip = 1 | total cost = Rp 6,560,843 | volume = 80
+DC055 → DC004 via GrandMax | trip = 9 | total cost = Rp 31,500,000 | volume = 900
+DC055 → DC006 via GrandMax | trip = 18 | total cost = Rp 63,000,000 | volume = 1,800
+DC055 → DC009 via GrandMax | trip = 23 | total cost = Rp 80,500,000 | volume = 2,300
+DC055 → DC010 via GrandMax | trip = 101 | total cost = Rp 353,500,000 | volume = 10,100
+DC055 → DC011 via GrandMax | trip = 23 | total cost = Rp 80,500,000 | volume = 2,300
+DC055 → DC013 via GrandMax | trip = 34 | total cost = Rp 119,000,000 | volume = 3,400
+DC055 → DC018 via GrandMax | trip = 15 | total cost = Rp 52,500,000 | volume = 1,500
+DC055 → DC021 via GrandMax | trip = 33 | total cost = Rp 115,500,000 | volume = 3,300
+DC055 → DC023 via GrandMax | trip = 33 | total cost = Rp 115,500,000 | volume = 3,300
+DC055 → DC025 via GrandMax | trip = 10 | total cost = Rp 35,000,000 | volume = 1,000
+DC055 → DC027 via GrandMax | trip = 18 | total cost = Rp 63,000,000 | volume = 1,800
+DC055 → DC029 via GrandMax | trip = 34 | total cost = Rp 119,000,000 | volume = 3,400
+DC055 → DC030 via GrandMax | trip = 20 | total cost = Rp 70,000,000 | volume = 2,000
+DC055 → DC048 via GrandMax | trip = 1 | total cost = Rp 3,500,000 | volume = 120
+DC055 → DC054 via GrandMax | trip = 1 | total cost = Rp 3,500,000 | volume = 120
+DC055 → DC056 via GrandMax | trip = 1 | total cost = Rp 3,500,000 | volume = 120
+DC056 → DC015 via GrandMax | trip = 32 | total cost = Rp 112,000,000 | volume = 3,200
+DC056 → DC019 via GrandMax | trip = 12 | total cost = Rp 42,000,000 | volume = 1,200
+SDC → DC031 via Build Up (40 CBM) | trip = 12 | total cost = Rp 150,000,000 | volume = 19,200
+SDC → DC031 via FUSO (22 CBM) | trip = 8 | total cost = Rp 69,462,400 | volume = 7,040
+SDC → DC032 via 20FT | trip = 1 | total cost = Rp 17,200,000 | volume = 1,160
+SDC → DC032 via 40FT | trip = 2 | total cost = Rp 55,000,000 | volume = 4,720
+SDC → DC033 via Build Up (40 CBM) | trip = 8 | total cost = Rp 188,000,000 | volume = 12,800
+SDC → DC033 via FUSO (22 CBM) | trip = 3 | total cost = Rp 52,500,000 | volume = 2,640
+SDC → DC034 via 20FT | trip = 1 | total cost = Rp 10,300,000 | volume = 1,160
+SDC → DC034 via 40FT | trip = 3 | total cost = Rp 45,000,000 | volume = 7,080
+SDC → DC035 via 20FT | trip = 1 | total cost = Rp 13,200,000 | volume = 1,160
+SDC → DC035 via 40FT | trip = 2 | total cost = Rp 39,000,000 | volume = 4,720
+SDC → DC036 via 40FT | trip = 3 | total cost = Rp 51,750,000 | volume = 7,080
+SDC → DC037 via 20FT | trip = 1 | total cost = Rp 11,214,769 | volume = 1,160
+SDC → DC037 via 40FT | trip = 3 | total cost = Rp 58,754,511 | volume = 7,080
+SDC → DC038 via 40FT | trip = 5 | total cost = Rp 77,676,455 | volume = 11,800
+SDC → DC039 via 20FT | trip = 2 | total cost = Rp 34,164,916 | volume = 2,320
+SDC → DC040 via 20FT | trip = 2 | total cost = Rp 34,190,420 | volume = 2,320
+SDC → DC041 via 20FT | trip = 1 | total cost = Rp 13,705,881 | volume = 1,160
+SDC → DC041 via 40FT | trip = 1 | total cost = Rp 22,539,849 | volume = 2,360
+SDC → DC042 via 20FT | trip = 1 | total cost = Rp 11,365,344 | volume = 1,160
+SDC → DC042 via 40FT | trip = 3 | total cost = Rp 53,830,380 | volume = 7,080
+SDC → DC043 via 20FT | trip = 1 | total cost = Rp 11,954,915 | volume = 1,160
+SDC → DC043 via 40FT | trip = 4 | total cost = Rp 93,052,768 | volume = 9,440
+SDC → DC044 via 20FT | trip = 1 | total cost = Rp 15,536,568 | volume = 1,160
+SDC → DC044 via 40FT | trip = 1 | total cost = Rp 26,680,606 | volume = 2,360
+SDC → DC045 via 20FT | trip = 1 | total cost = Rp 17,927,384 | volume = 1,160
+SDC → DC045 via 40FT | trip = 2 | total cost = Rp 61,928,696 | volume = 4,720
+--------------------------------------------------
+💰 Total Biaya Distribusi (berdasarkan cost_per_trip): Rp 6,374,205,622
+--------------------------------------------------
+ 💸 Biaya SDC ke DC: Rp 1,235,935,862
+ 💸 Biaya Antar DC: Rp 5,138,269,760
+📦 Total Volume Dikirim: 258,860 box
+📈 Total Volume Oversupply: 6,963 box
+
+📊 Total Kendaraan Aktif per Mode (Global):
+CDD: 15 / 48 kendaraan
+CDE: 14 / 102 kendaraan
+GrandMax: 30 / 30 kendaraan
+FUSO: 0 / 999 kendaraan
+Kijang: 1 / 1 kendaraan
+
+============================================================
+ANALISIS BIAYA BERDASARKAN UTILISASI ARMADA (ANTAR DC)
+============================================================
+
+--- Biaya Tetap & Supir per Armada ---
+🚐 Armada DC033 - CDD:
+  - Jam Kerja: 1524 jam -> Kendaraan Aktif: 7
+  - Biaya Tetap: 7 x Rp 6,900,000 = Rp 48,300,000
+  - Biaya Supir: 16 supir x Rp 3,756,622.0 = Rp 60,105,952.0
+🚐 Armada DC033 - GrandMax:
+  - Jam Kerja: 20 jam -> Kendaraan Aktif: 1
+  - Biaya Tetap: 1 x Rp 3,500,000 = Rp 3,500,000
+  - Biaya Supir: 4 supir x Rp 3,756,622.0 = Rp 15,026,488.0
+🚐 Armada DC033 - CDE:
+  - Jam Kerja: 36 jam -> Kendaraan Aktif: 1
+  - Biaya Tetap: 1 x Rp 5,500,000 = Rp 5,500,000
+  - Biaya Supir: 4 supir x Rp 3,756,622.0 = Rp 15,026,488.0
+🚐 Armada DC037 - CDE:
+  - Jam Kerja: 720 jam -> Kendaraan Aktif: 3
+  - Biaya Tetap: 3 x Rp 6,560,843 = Rp 19,682,529
+  - Biaya Supir: 8 supir x Rp 4,117,071.0 = Rp 32,936,568.0
+🚐 Armada DC037 - GrandMax:
+  - Jam Kerja: 394 jam -> Kendaraan Aktif: 2
+  - Biaya Tetap: 2 x Rp 6,560,843 = Rp 13,121,686
+  - Biaya Supir: 6 supir x Rp 4,117,071.0 = Rp 24,702,426.0
+🚐 Armada DC041 - CDE:
+  - Jam Kerja: 960 jam -> Kendaraan Aktif: 4
+  - Biaya Tetap: 4 x Rp 6,560,843 = Rp 26,243,372
+  - Biaya Supir: 10 supir x Rp 3,842,203.0 = Rp 38,422,030.0
+🚐 Armada DC041 - GrandMax:
+  - Jam Kerja: 36 jam -> Kendaraan Aktif: 1
+  - Biaya Tetap: 1 x Rp 6,560,843 = Rp 6,560,843
+  - Biaya Supir: 4 supir x Rp 3,842,203.0 = Rp 15,368,812.0
+🚐 Armada DC044 - CDE:
+  - Jam Kerja: 236 jam -> Kendaraan Aktif: 1
+  - Biaya Tetap: 1 x Rp 6,560,843 = Rp 6,560,843
+  - Biaya Supir: 4 supir x Rp 3,849,433.0 = Rp 15,397,732.0
+🚐 Armada DC044 - GrandMax:
+  - Jam Kerja: 1440 jam -> Kendaraan Aktif: 6
+  - Biaya Tetap: 6 x Rp 6,560,843 = Rp 39,365,058
+  - Biaya Supir: 14 supir x Rp 3,849,433.0 = Rp 53,892,062.0
+🚐 Armada DC045 - CDE:
+  - Jam Kerja: 848 jam -> Kendaraan Aktif: 4
+  - Biaya Tetap: 4 x Rp 6,560,843 = Rp 26,243,372
+  - Biaya Supir: 10 supir x Rp 4,901,971.0 = Rp 49,019,710.0
+🚐 Armada DC045 - Kijang:
+  - Jam Kerja: 34 jam -> Kendaraan Aktif: 1
+  - Biaya Tetap: 1 x Rp 6,560,843 = Rp 6,560,843
+  - Biaya Supir: 4 supir x Rp 4,901,971.0 = Rp 19,607,884.0
+🚐 Armada DC032 - CDD:
+  - Jam Kerja: 232 jam -> Kendaraan Aktif: 1
+  - Biaya Tetap: 1 x Rp 6,900,000 = Rp 6,900,000
+  - Biaya Supir: 4 supir x Rp 3,599,170.25 = Rp 14,396,681.0
+🚐 Armada DC032 - CDE:
+  - Jam Kerja: 46 jam -> Kendaraan Aktif: 1
+  - Biaya Tetap: 1 x Rp 5,500,000 = Rp 5,500,000
+  - Biaya Supir: 4 supir x Rp 3,599,170.25 = Rp 14,396,681.0
+🚐 Armada DC034 - CDD:
+  - Jam Kerja: 156 jam -> Kendaraan Aktif: 1
+  - Biaya Tetap: 1 x Rp 6,900,000 = Rp 6,900,000
+  - Biaya Supir: 4 supir x Rp 4,232,023.9 = Rp 16,928,095.6
+🚐 Armada DC035 - GrandMax:
+  - Jam Kerja: 966 jam -> Kendaraan Aktif: 5
+  - Biaya Tetap: 5 x Rp 3,500,000 = Rp 17,500,000
+  - Biaya Supir: 12 supir x Rp 4,390,444.5 = Rp 52,685,334.0
+🚐 Armada DC035 - CDD:
+  - Jam Kerja: 368 jam -> Kendaraan Aktif: 2
+  - Biaya Tetap: 2 x Rp 6,900,000 = Rp 13,800,000
+  - Biaya Supir: 6 supir x Rp 4,390,444.5 = Rp 26,342,667.0
+🚐 Armada DC036 - CDD:
+  - Jam Kerja: 792 jam -> Kendaraan Aktif: 4
+  - Biaya Tetap: 4 x Rp 6,900,000 = Rp 27,600,000
+  - Biaya Supir: 10 supir x Rp 3,376,847.9333333336 = Rp 33,768,479.333333336
+🚐 Armada DC055 - GrandMax:
+  - Jam Kerja: 2586 jam -> Kendaraan Aktif: 11
+  - Biaya Tetap: 11 x Rp 3,500,000 = Rp 38,500,000
+  - Biaya Supir: 24 supir x Rp 3,756,622.0 = Rp 90,158,928.0
+🚐 Armada DC056 - GrandMax:
+  - Jam Kerja: 240 jam -> Kendaraan Aktif: 1
+  - Biaya Tetap: 1 x Rp 3,500,000 = Rp 3,500,000
+  - Biaya Supir: 4 supir x Rp 3,756,622.0 = Rp 15,026,488.0
+
+--- Biaya Variabel (BBM) per Trip ---
+  ⛽ DC033 -> DC047 (CDD): 18 trip x 1 hari x Rp 200,000 = Rp 3,600,000
+  ⛽ DC033 -> DC047 (GrandMax): 1 trip x 1 hari x Rp 200,000 = Rp 200,000
+  ⛽ DC033 -> DC050 (CDD): 28 trip x 2 hari x Rp 200,000 = Rp 11,200,000
+  ⛽ DC033 -> DC053 (CDD): 8 trip x 2 hari x Rp 200,000 = Rp 3,200,000
+  ⛽ DC033 -> DC053 (CDE): 1 trip x 2 hari x Rp 200,000 = Rp 400,000
+  ⛽ DC033 -> DC057 (CDD): 10 trip x 1 hari x Rp 200,000 = Rp 2,000,000
+  ⛽ DC033 -> DC057 (CDE): 1 trip x 1 hari x Rp 200,000 = Rp 200,000
+  ⛽ DC033 -> DC057 (GrandMax): 1 trip x 1 hari x Rp 200,000 = Rp 200,000
+  ⛽ DC037 -> DC003 (CDE): 61 trip x 1 hari x Rp 200,000 = Rp 12,200,000
+  ⛽ DC037 -> DC005 (GrandMax): 23 trip x 1 hari x Rp 200,000 = Rp 4,600,000
+  ⛽ DC037 -> DC012 (GrandMax): 2 trip x 2 hari x Rp 200,000 = Rp 800,000
+  ⛽ DC037 -> DC020 (CDE): 22 trip x 1 hari x Rp 200,000 = Rp 4,400,000
+  ⛽ DC041 -> DC017 (CDE): 52 trip x 1 hari x Rp 200,000 = Rp 10,400,000
+  ⛽ DC041 -> DC017 (GrandMax): 3 trip x 1 hari x Rp 200,000 = Rp 600,000
+  ⛽ DC041 -> DC026 (CDE): 22 trip x 1 hari x Rp 200,000 = Rp 4,400,000
+  ⛽ DC044 -> DC005 (CDE): 14 trip x 1 hari x Rp 200,000 = Rp 2,800,000
+  ⛽ DC044 -> DC012 (GrandMax): 18 trip x 1 hari x Rp 200,000 = Rp 3,600,000
+  ⛽ DC044 -> DC022 (GrandMax): 19 trip x 1 hari x Rp 200,000 = Rp 3,800,000
+  ⛽ DC044 -> DC024 (GrandMax): 32 trip x 2 hari x Rp 200,000 = Rp 12,800,000
+  ⛽ DC045 -> DC001 (CDE): 27 trip x 1 hari x Rp 200,000 = Rp 5,400,000
+  ⛽ DC045 -> DC008 (CDE): 13 trip x 1 hari x Rp 200,000 = Rp 2,600,000
+  ⛽ DC037 -> DC045 (CDE): 1 trip x 1 hari x Rp 200,000 = Rp 200,000
+  ⛽ DC041 -> DC044 (CDE): 2 trip x 1 hari x Rp 200,000 = Rp 400,000
+  ⛽ DC041 -> DC045 (CDE): 2 trip x 2 hari x Rp 200,000 = Rp 800,000
+  ⛽ DC044 -> DC041 (CDE): 3 trip x 1 hari x Rp 200,000 = Rp 600,000
+  ⛽ DC045 -> DC039 (CDE): 3 trip x 1 hari x Rp 200,000 = Rp 600,000
+  ⛽ DC045 -> DC044 (Kijang): 1 trip x 2 hari x Rp 200,000 = Rp 400,000
+  ⛽ DC032 -> DC051 (CDD): 12 trip x 1 hari x Rp 200,000 = Rp 2,400,000
+  ⛽ DC032 -> DC051 (CDE): 1 trip x 1 hari x Rp 200,000 = Rp 200,000
+  ⛽ DC032 -> DC052 (CDE): 1 trip x 1 hari x Rp 200,000 = Rp 200,000
+  ⛽ DC032 -> DC055 (CDE): 1 trip x 1 hari x Rp 200,000 = Rp 200,000
+  ⛽ DC032 -> DC056 (CDD): 4 trip x 1 hari x Rp 200,000 = Rp 800,000
+  ⛽ DC034 -> DC048 (CDD): 9 trip x 1 hari x Rp 200,000 = Rp 1,800,000
+  ⛽ DC034 -> DC055 (CDD): 17 trip x 1 hari x Rp 200,000 = Rp 3,400,000
+  ⛽ DC035 -> DC051 (GrandMax): 1 trip x 1 hari x Rp 200,000 = Rp 200,000
+  ⛽ DC035 -> DC054 (CDD): 10 trip x 2 hari x Rp 200,000 = Rp 4,000,000
+  ⛽ DC035 -> DC056 (CDD): 2 trip x 1 hari x Rp 200,000 = Rp 400,000
+  ⛽ DC036 -> DC046 (CDD): 9 trip x 2 hari x Rp 200,000 = Rp 3,600,000
+  ⛽ DC036 -> DC049 (CDD): 26 trip x 1 hari x Rp 200,000 = Rp 5,200,000
+  ⛽ DC036 -> DC052 (CDD): 9 trip x 1 hari x Rp 200,000 = Rp 1,800,000
+  ⛽ DC055 -> DC048 (GrandMax): 1 trip x 1 hari x Rp 200,000 = Rp 200,000
+  ⛽ DC055 -> DC054 (GrandMax): 1 trip x 1 hari x Rp 200,000 = Rp 200,000
+  ⛽ DC055 -> DC056 (GrandMax): 1 trip x 1 hari x Rp 200,000 = Rp 200,000
+  ⛽ DC035 -> DC002 (GrandMax): 15 trip x 1 hari x Rp 200,000 = Rp 3,000,000
+  ⛽ DC035 -> DC007 (GrandMax): 20 trip x 1 hari x Rp 200,000 = Rp 4,000,000
+  ⛽ DC035 -> DC014 (GrandMax): 33 trip x 1 hari x Rp 200,000 = Rp 6,600,000
+  ⛽ DC035 -> DC015 (GrandMax): 8 trip x 2 hari x Rp 200,000 = Rp 3,200,000
+  ⛽ DC035 -> DC016 (GrandMax): 24 trip x 1 hari x Rp 200,000 = Rp 4,800,000
+  ⛽ DC035 -> DC028 (GrandMax): 20 trip x 1 hari x Rp 200,000 = Rp 4,000,000
+  ⛽ DC055 -> DC004 (GrandMax): 9 trip x 1 hari x Rp 200,000 = Rp 1,800,000
+  ⛽ DC055 -> DC006 (GrandMax): 18 trip x 1 hari x Rp 200,000 = Rp 3,600,000
+  ⛽ DC055 -> DC009 (GrandMax): 23 trip x 1 hari x Rp 200,000 = Rp 4,600,000
+  ⛽ DC055 -> DC010 (GrandMax): 101 trip x 1 hari x Rp 200,000 = Rp 20,200,000
+  ⛽ DC055 -> DC011 (GrandMax): 23 trip x 1 hari x Rp 200,000 = Rp 4,600,000
+  ⛽ DC055 -> DC013 (GrandMax): 34 trip x 1 hari x Rp 200,000 = Rp 6,800,000
+  ⛽ DC055 -> DC018 (GrandMax): 15 trip x 1 hari x Rp 200,000 = Rp 3,000,000
+  ⛽ DC055 -> DC021 (GrandMax): 33 trip x 1 hari x Rp 200,000 = Rp 6,600,000
+  ⛽ DC055 -> DC023 (GrandMax): 33 trip x 1 hari x Rp 200,000 = Rp 6,600,000
+  ⛽ DC055 -> DC025 (GrandMax): 10 trip x 1 hari x Rp 200,000 = Rp 2,000,000
+  ⛽ DC055 -> DC027 (GrandMax): 18 trip x 1 hari x Rp 200,000 = Rp 3,600,000
+  ⛽ DC055 -> DC029 (GrandMax): 34 trip x 1 hari x Rp 200,000 = Rp 6,800,000
+  ⛽ DC055 -> DC030 (GrandMax): 20 trip x 1 hari x Rp 200,000 = Rp 4,000,000
+  ⛽ DC056 -> DC015 (GrandMax): 32 trip x 1 hari x Rp 200,000 = Rp 6,400,000
+  ⛽ DC056 -> DC019 (GrandMax): 12 trip x 1 hari x Rp 200,000 = Rp 2,400,000
+
+------------------------------------------------------------
+REKAPITULASI BIAYA KESELURUHAN
+------------------------------------------------------------
+💸 Biaya Antar DC (Baru): Rp 547,638,546
+  ├── Biaya Tetap Armada: Rp 321,838,546
+  └── Biaya Bahan Bakar : Rp 225,800,000
+🚚 Biaya Supir         : Rp 603,209,505
+💰 TOTAL KESELURUHAN   : Rp 1,150,848,051
+============================================================

@@ -20,7 +20,7 @@ mode_param = {
     'Kijang': 80,
     'FUSO': 350 # Pastikan FUSO ada jika digunakan
 }
-PENALTY_RATE = 10_000_000 # Penalti untuk setiap unit demand yang tidak terpenuhi (untuk motivasi solver)
+PENALTY_RATE = 100_000_000_000 # Penalti untuk setiap unit demand yang tidak terpenuhi (untuk motivasi solver)
 
 WORKING_HOURS_PER_DAY = 10
 WORKING_DAYS_PER_MONTH = 24
@@ -138,10 +138,11 @@ if 'df_turnover' not in locals():
     })
 
 turnover_capacity_dict = {
-    row['DC ID']: int(round(row['Capacity'] * row['Turnover Per Bulan']))
+    row['DC ID']: int(round(row['Capacity'] * (row['Turnover Per Bulan'] + 1)))
     for _, row in df_turnover.iterrows()
     if pd.notna(row['Capacity']) and pd.notna(row['Turnover Per Bulan'])
 }
+
 
 
 # --- 2. DECISION VARIABLES ---
@@ -152,7 +153,7 @@ for i, j, m in df_edges_final[['source_node', 'target_node', 'mode_type']].itert
     # Batas atas untuk trip bisa lebih realistis: total demand tertinggi dibagi volume terkecil
     # Ini untuk mencegah variabel menjadi terlalu besar dan memperlambat solver
     max_trips_possible = math.ceil(max(demand_dict.values()) / min(mode_param.values())) if mode_param else 1_000_000
-    x[i, j, m] = model.NewIntVar(0, max_trips_possible, f"x_{i}_{j}_{m}")
+    x[i, j, m] = model.NewIntVar(0, max_trips_possible, f"x_{i}{j}{m}")
 
 
 # --- 3. CONSTRAINTS ---
@@ -197,7 +198,8 @@ for (i, j, m), var in x.items():
             model.Add(var <= max_trip_by_lead_time)
         else:
             # Jika tidak ada kendaraan untuk mode ini di DC sumber, maka trip harus 0
-            model.Add(var == 0)
+            # model.Add(var == 0)
+            pass
     elif lead == 0 and not i.startswith("SDC"): # Jika lead time 0 dan bukan SDC, batasi trip jadi 0 (tidak realistis)
         model.Add(var == 0)
 
@@ -209,7 +211,7 @@ for (i, j, m), var in x.items():
     # --- Constraint: SDC ke DC order constraint mingguan (per MODA) ---
     # Ini memastikan setiap MODA dari SDC ke DC tujuan memiliki batas trip sendiri
     if i.startswith("SDC") and j in order_limit:
-        # Asumsi: order_limit[j] adalah batas trip untuk *setiap moda* ke DC tersebut dari SDC
+        # Asumsi: order_limit[j] adalah batas trip untuk setiap moda ke DC tersebut dari SDC
         model.Add(var <= order_limit[j])
 
 
@@ -287,6 +289,8 @@ for j, demand in demand_dict.items():
     unmet[j] = unmet_var  # Simpan variabel unmet untuk laporan nanti
     sent_volume_var[j] = sent  # Simpan total volume yang berhasil dikirim
 
+
+
 # Fungsi objektif: Minimalkan (biaya distribusi + penalti unmet demand)
 # Bagian diversity_bonus_terms telah dihapus
 model.Minimize(sum(cost_terms) + sum(penalty_terms))
@@ -345,7 +349,7 @@ for (i, j, m), var in x.items():
         if trip > 0 and vol > 0:
             cost_per_box = cost / vol
             if cost_per_box > 1_000_000: # Batas peringatan, sesuaikan
-                print(f"⚠️ TRIP MAHAL: {i} → {j} via {m} = Rp {cost_per_box:,.0f}/box")
+                print(f"⚠ TRIP MAHAL: {i} → {j} via {m} = Rp {cost_per_box:,.0f}/box")
 
 
 print("-" * 50)
@@ -481,12 +485,12 @@ for j in df_debug.head(5)['DC']:  # Ambil 5 DC teratas untuk analisis detail
         route_max_vol_per_trip_from_data = df_middle_edge_indexed.loc[(i,j), 'max_volume'] if (i,j) in df_middle_edge_indexed.index and pd.notna(df_middle_edge_indexed.loc[(i,j), 'max_volume']) else "No specific limit"
 
         # print(f"- {i} → {j} via {m}:")
-        # print(f"  ✔ Rute valid? {route_valid}")
-        # print(f"  🚚 Trip yang digunakan: {trips_val:,}")
-        # print(f"  📦 Volume/trip (setelah penyesuaian): {vol:,}")
-        # print(f"  🛣 Max_volume_per_trip dari data rute: {route_max_vol_per_trip_from_data}")
-        # print(f"  💼 Batas trip dari armada: {max_trip_limit_text}")
-        # print(f"  ⏱ Batas trip dari lead time: {max_trip_lead_text}")
+        # print(f"  ✔ Rute valid? {route_valid}")
+        # print(f"  🚚 Trip yang digunakan: {trips_val:,}")
+        # print(f"  📦 Volume/trip (setelah penyesuaian): {vol:,}")
+        # print(f"  🛣 Max_volume_per_trip dari data rute: {route_max_vol_per_trip_from_data}")
+        # print(f"  💼 Batas trip dari armada: {max_trip_limit_text}")
+        # print(f"  ⏱ Batas trip dari lead time: {max_trip_lead_text}")
 
 print("\n📨 Detail Rute Masuk ke DC033 (Contoh):")
 for (i, j, m) in x:
@@ -608,3 +612,19 @@ for m in vehicle_modes:
                 for i in df_resources_joined['dc_id'].unique()
                 if (i, m) in vehicle_used)
     print(f"{m}: {total} kendaraan")
+
+for dc in df_debug.head(10)['DC']:
+    print(f"🛑 {dc} → order_limit: {order_limit.get(dc, 'N/A')}")
+
+# Misal kamu mau debug DC016 (atau DC manapun yang masih unmet)
+dc_target = 'DC016'
+
+print(f"\n🔎 Debug semua rute masuk ke {dc_target}")
+for (i, j, m) in x:
+    if j == dc_target:
+        trips = solver.Value(x[i, j, m])
+        vol = volume_per_trip.get((i, j, m), 0)
+        cost = cost_per_trip.get((i, j, m), 0)
+        if vol > 0:
+            cost_per_box = cost / vol
+            print(f"{i} → {j} via {m}: trip = {trips}, vol/trip = {vol}, cost/trip = Rp {cost:,}, cost/box = Rp {cost_per_box:,.0f}")
